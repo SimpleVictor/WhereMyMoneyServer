@@ -6,6 +6,8 @@ import { json, urlencoded } from "body-parser";
 import { loginRouter } from "./routes/login";
 import { protectedRouter } from "./routes/protected";
 
+// var ionicPushServer = require('ionic-push-server');
+
 const app: express.Application = express();
 app.disable("x-powered-by");
 
@@ -17,9 +19,44 @@ app.use(urlencoded({ extended: true }));
 
 // api routes
 app.use("/api", protectedRouter);
-app.use("/login", loginRouter);
+app.use("/echo", loginRouter);
 
 app.use('/client', express.static(join(__dirname, '../client')));
+
+
+
+// var credentials = {
+//     IonicApplicationID : "0a9fc6ea",
+//     IonicApplicationAPItoken : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkNGYyY2YyNC1iOTExLTQyMGQtODllYi05MTgzMTRlOWFhMTUifQ.bmpvbB0Q8YGbyexgFEIGrj6lKqUyMZ1JgcB3nXWjJVc"
+// };
+//
+// var notification = {
+//     "tokens": ["4a080ba4fd6d1d9290e3051c4f9452f8cd340f05e6619f92"],
+//     "profile": "my-security-profile",
+//     "notification": {
+//         "title": "Hi",
+//         "message": "Hello world!",
+//         "android": {
+//             "title": "Hey",
+//             "message": "Hello Android!"
+//         },
+//         "ios": {
+//             "title": "Howdy",
+//             "message": "Hello iOS!"
+//         }
+//     }
+// };
+//
+// ionicPushServer(credentials, notification);
+
+
+
+
+
+
+
+
+
 
 // error handlers
 // development error handler

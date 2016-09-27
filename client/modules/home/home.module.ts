@@ -5,11 +5,13 @@ import { CommonModule } from "@angular/common";
 import { HomeComponent } from "./home.component";
 import { routing } from "./home.routing";
 import { SharedModule } from "../shared/shared.module";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
     imports: [
         CommonModule,
         routing,
+        FormsModule,
         SharedModule.forRoot(),
         NgSemanticModule,
     ],

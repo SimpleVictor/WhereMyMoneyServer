@@ -1,1 +1,56 @@
-<h1>Hey</h1>
+<div class="container">
+    <input type="text" class="form-control" (keyup)="changeData()" [(ngModel)]="name" placeholder="write here">
+    <p>Now Displaying {{name}}</p>
+    <div [ngSwitch]="switcher">
+        <div *ngSwitchCase="'one'" [ngClass]="{'myfadeIn': fadeIn}">
+            <p>bruhhh</p>
+        </div>
+        <div *ngSwitchCase="'two'" [ngClass]="{'myfadeIn': fadeIn}">
+            <p>duddeeee</p>
+        </div>
+        <div *ngSwitchCase="'three'" [ngClass]="{'myfadeIn': fadeIn}">
+            <p>suck ittt!</p>
+        </div>
+    </div>
+
+    <button class="btn btn-primary btn-block" (click)="changeColor()">Change Color</button>
+
+    <!--<div [ngClass]="{'myfadeOut': fadeOut, 'myfadeIn': fadeIn}">-->
+        <!--<div class="ui card">-->
+            <!--<div class="content">-->
+                <!--<div class="header">Project Timeline</div>-->
+            <!--</div>-->
+            <!--<div class="content">-->
+                <!--<h4 class="ui sub header">Activity</h4>-->
+                <!--<div class="ui small feed">-->
+                    <!--<div class="event">-->
+                        <!--<div class="content">-->
+                            <!--<div class="summary">-->
+                                <!--<a>Elliot Fu</a> added <a>Jenny Hess</a> to the project-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="event">-->
+                        <!--<div class="content">-->
+                            <!--<div class="summary">-->
+                                <!--<a>Stevie Feliciano</a> was added as an <a>Administrator</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="event">-->
+                        <!--<div class="content">-->
+                            <!--<div class="summary">-->
+                                <!--<a>Helen Troy</a> added two pictures-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="extra content">-->
+                <!--<button class="ui button">Join Project</button>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+</div>
